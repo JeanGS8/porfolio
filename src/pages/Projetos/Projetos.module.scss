@@ -1,0 +1,29 @@
+.projetos{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../assets/blue.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .content{
+    height: 100%;
+    position: relative;
+
+    img{
+      width: 100%;
+    }
+  }
+}
