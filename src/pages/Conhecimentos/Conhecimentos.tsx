@@ -3,7 +3,7 @@ import style from "./Conhecimentos.module.scss";
 
 export const Conhecimentos = () => {
   return(
-    <div id="conhecimentos" className={style.conhecimentos}>
+    <div id="conhecimentos" className={`${style.conhecimentos} pt-5`}>
       <h2 className="py-5 text-center">CONHECIMENTOS</h2>
       
       <div className={style.slide}>

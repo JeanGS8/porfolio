@@ -14,7 +14,6 @@
   {
     "nome": "Blog Pessoal Back-end",
     "sobre": "O BlogPessoal foi desenvolvido utilizando a tecnologia Nest.js para o back-end do projeto. É uma plataforma de blog onde os usuários podem criar contas, fazer login e logout, além de gerenciar temas e postagens. Eles podem cadastrar, alterar e deletar temas, assim como criar, editar e excluir postagens. A interface intuitiva facilita a organização e personalização do conteúdo, proporcionando uma experiência agradável e eficiente.",
-    "link": "https://blog-back-fawn.vercel.app/",
     "github": "https://github.com/JeanGS8/blog-back",
     "fotosJson": [
       "blog-back/1.jpeg",

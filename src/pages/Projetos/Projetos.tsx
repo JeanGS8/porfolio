@@ -1,5 +1,7 @@
 import style from "./Projetos.module.scss";
 import json from "./projetos.json";
+import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa";
 
 // swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -38,7 +40,7 @@ export const Projetos = () => {
 
   return(
     <div id="projetos" className={style.projetos}>
-      <Container fluid className={`${style.content} d-flex flex-column`}>
+      <Container fluid className={`${style.content} d-flex flex-column pt-5`}>
         <Row>
           <Col xs={"auto"} className="mx-auto pt-5">
             <h2>Projetos</h2>
@@ -49,7 +51,6 @@ export const Projetos = () => {
             <Swiper {...swiperPai} className="pb-5">
               {json.map( (projeto, keyProjeto) => (
                 <SwiperSlide key={keyProjeto}>
-                  <Container fluid>
                     <Row className="justify-content-around">
                       <Col xs={12} md={10} lg={5}>
                         <Swiper {...swiperFilho}>
@@ -63,12 +64,32 @@ export const Projetos = () => {
                           })}
                         </Swiper>
                       </Col>
-                      <Col xs={12} md={10} lg={6}>
-                        <h3 className="text-center text-lg-start mt-3 mt-lg-0 m-0 pb-1">{projeto.nome}</h3>
-                        <p className="pt-1 m-0">{projeto.sobre}</p>
+                      <Col xs={12} md={10} lg={6} className="d-flex flex-column justify-content-between">
+                        <Row>
+                          <Col>
+                            <h3 className="text-center text-lg-start mt-3 mt-lg-0 m-0 pb-1">
+                              {projeto.nome}
+                              
+                              {projeto.link?
+                                <>
+                                  <a href={projeto.link} target="_blank" className="mx-2">
+                                    <FaLink  className={style.url} />
+                                  </a>
+                                  <a href={projeto.github} target="_blank">
+                                    <FaGithub className={style.url}/>
+                                  </a>
+                                </>
+                              :
+                                <a href={projeto.github} target="_blank" className="mx-2">
+                                  <FaGithub className={style.url}/>
+                                </a>
+                              }
+                            </h3>
+                            <p className="pt-1 m-0">{projeto.sobre}</p>
+                          </Col>
+                        </Row>
                       </Col>
                     </Row>
-                  </Container>
                 </SwiperSlide>
               ))}
             </Swiper>
