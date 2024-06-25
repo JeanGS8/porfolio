@@ -9,15 +9,15 @@ export const Contatos = () => {
   return(
     <div id="contatos" className={style.contatos}>
       <a href="https://github.com/JeanGS8" target="_blank">
-        <img src={github} alt="link github"/>
+        <img src={github} alt="link github" loading="eager"/>
       </a>
 
       <a href={curriculo} download="curriculo.pdf">
-        <img src={pdf} alt="baixar curriculo"/>
+        <img src={pdf} alt="baixar curriculo" loading="eager"/>
       </a>
 
       <a href="https://www.linkedin.com/in/jeangs/" target="_blank">
-        <img src={linkedin} alt="link linkedin"/>
+        <img src={linkedin} alt="link linkedin" loading="eager"/>
       </a>
     </div>
   )

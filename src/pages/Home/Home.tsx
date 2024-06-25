@@ -14,7 +14,7 @@ export const Home = () => {
       </Row>
       <Row>
         <Col xs={10} sm={"auto"} className='text-center mb-5 mb-md-0 mx-auto'>
-          <img src={foto} className={`${style.foto} w-100`} alt="Jean" />
+          <img src={foto} className={`${style.foto} w-100`} alt="Jean" loading="eager" />
         </Col>
       </Row>
     </Container>
